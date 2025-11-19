@@ -2057,8 +2057,22 @@ textarea.form-input::-webkit-resizer {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
   gap: 2rem;
+}
+
+/* Medium screens: 2 columns */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens: 1 column */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card {
@@ -2087,4 +2101,13 @@ textarea.form-input::-webkit-resizer {
 
 .project-card p {
   font-size: 0.9rem;
+}
+
+.view-project {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--orange-yellow-crayola); /* Or any colour you like */
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s;
 }
