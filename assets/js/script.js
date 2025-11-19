@@ -146,3 +146,15 @@ navigationLinks.forEach((link) => {
     window.scrollTo(0, 0);
   });
 });
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = encodeURIComponent(this.fullname.value);
+  const email = encodeURIComponent(this.email.value);
+  const message = encodeURIComponent(this.message.value);
+
+  const url = `https://mail.google.com/mail/?view=cm&to=sharmaaagya7@gmail.com&su=Message from ${name}&body=From: ${email}%0D%0A%0D%0A${message}`;
+
+  window.open(url, "_blank");
+});

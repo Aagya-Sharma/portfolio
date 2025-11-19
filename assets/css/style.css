@@ -2026,3 +2026,65 @@ textarea.form-input::-webkit-resizer {
     max-width: 700px;
   }
 }
+
+.skills {
+  margin-bottom: 35px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.skill-item span {
+  color: white;
+}
+
+.skill-item ion-icon {
+  font-size: 28px;
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--border-gradient-onyx);
+
+  padding: 1rem;
+  border-radius: 12px;
+  color: white;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card ion-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+}
